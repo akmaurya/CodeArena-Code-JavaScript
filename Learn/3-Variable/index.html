@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <title>
+            Learn JavaScript
+        </title>
+        
+    </head>
+    <body>
+        <h1>
+            Learning JavaScript. 
+        </h1>
+
+        <table style="border: 2px;">
+            <tr>
+                <th>Variable</th>
+                <th>Value</th>
+                <th>Type</th>
+            </tr>
+            <tr>
+                <td>xString</td>
+                <td id="xStringValue"></td>
+                <td id="xStringType"></td>
+            </tr>
+            <tr>
+                <td>xNumber</td>
+                <td id="xNumberValue"></td>
+                <td id="xNumberType"></td>
+            </tr>
+            <tr>
+                <td>xNumberPoint</td>
+                <td id="xNumberPointValue"></td>
+                <td id="xNumberPointType"></td>
+            </tr>
+            <tr>
+                <td>xNumberNegative</td>
+                <td id="xNumberNegativeValue"></td>
+                <td id="xNumberNegativeType"></td>
+            </tr>
+            <tr>
+                <td>xBoolean</td>
+                <td id="xBooleanValue"></td>
+                <td id="xBooleanType"></td>
+            </tr>
+            <tr>
+                <td>xArray</td>
+                <td id="xArrayValue"></td>
+                <td id="xArrayType"></td>
+            </tr>
+            <tr>
+                <td>xObject</td>
+                <td id="xObjectValue"></td>
+                <td id="xObjectType"></td>
+            </tr>
+            <tr>
+                <td>xNull</td>
+                <td id="xNullValue"></td>
+                <td id="xNullType"></td>
+            </tr>
+            <tr>
+                <td>xBlank</td>
+                <td id="xBlankValue"></td>
+                <td id="xBlankType"></td>
+            </tr>
+        </table>
+
+        <script>
+            var x = "String from a variable";
+            document.write("Value from variable x = "+x);
+            document.write('<br>');
+            document.write('x');
+
+            var y = 10.5;
+            document.write('<br>');
+            document.write(y);
+
+            var y = true;
+            document.write('<br>');
+            document.write(y);
+
+            document.write('<br>');
+
+            let z = "let variable";
+            //let z = "let variable can't be redefine";
+            document.write('<br>');
+            document.write(z);
+
+            const a = "Hello";
+            //a = "Hello World"
+            document.write('<br>');
+            document.write(a);
+
+            var xString = "String Value";
+            var xNumber = 12;
+            var xNumberPoint = 12.9;
+            var xNumberNegative = -12.9;
+            var xBoolean = true;
+            var xArray = ["ar", "vi", "nd"];
+            var xObject = {firstName:"Khushboo", secondName:"Maurya"};
+            var xNull = null;
+            var xBlank;
+
+            document.write("<br>xString: " + xString + ", Type: " + typeof xString);
+            document.write("<br>xNumber: " + xNumber + ", Type: " + typeof xNumber);
+            document.write("<br>xNumberPoint: " + xNumberPoint + ", Type: " + typeof xNumberPoint);
+            document.write("<br>xNumberNegative: " + xNumberNegative + ", Type: " + typeof xNumberNegative);
+            document.write("<br>xBoolean: " + xBoolean + ", Type: " + typeof xBoolean);
+            document.write("<br>xArray: " + xArray + ", Type: " + typeof xArray);
+            document.write("<br>xObject: " + JSON.stringify(xObject) + ", Type: " + typeof xObject);
+            document.write("<br>xNull: " + xNull + ", Type: " + typeof xNull);
+            document.write("<br>xBlank: " + xBlank + ", Type: " + typeof xBlank);
+
+            console.log("xString: " + xString + ", Type: " + typeof xString);
+            console.log("xNumber: " + xNumber + ", Type: " + typeof xNumber);
+            console.log("xNumberPoint: " + xNumberPoint + ", Type: " + typeof xNumberPoint);
+            console.log("xNumberNegative: " + xNumberNegative + ", Type: " + typeof xNumberNegative);
+            console.log("xBoolean: " + xBoolean + ", Type: " + typeof xBoolean);
+            console.log("xArray: " + xArray + ", Type: " + typeof xArray);
+            console.log("xObject: " + JSON.stringify(xObject) + ", Type: " + typeof xObject);
+            console.log("xNull: " + xNull + ", Type: " + typeof xNull);
+            console.log("xBlank: " + xBlank + ", Type: " + typeof xBlank);
+
+        // function displayValueAndType(variableName, value, type) {
+        //     var outputDiv = document.getElementById('output');
+        //     var outputText = variableName + ": " + value + ", Type: " + type + "<br>";
+        //     outputDiv.innerHTML += outputText;
+        // }
+
+        // displayValueAndType("xString", xString, typeof xString);
+        // displayValueAndType("xNumber", xNumber, typeof xNumber);
+        // displayValueAndType("xNumberPoint", xNumberPoint, typeof xNumberPoint);
+        // displayValueAndType("xNumberNegative", xNumberNegative, typeof xNumberNegative);
+        // displayValueAndType("xBoolean", xBoolean, typeof xBoolean);
+        // displayValueAndType("xArray", JSON.stringify(xArray), typeof xArray);
+        // displayValueAndType("xObject", JSON.stringify(xObject), typeof xObject);
+        // displayValueAndType("xNull", xNull, typeof xNull);
+        // displayValueAndType("xBlank", xBlank, typeof xBlank);
+
+        document.getElementById("xStringValue").textContent = xString;
+        document.getElementById("xStringType").textContent = typeof xString;
+        document.getElementById("xNumberValue").textContent = xNumber;
+        document.getElementById("xNumberType").textContent = typeof xNumber;
+        document.getElementById("xNumberPointValue").textContent = xNumberPoint;
+        document.getElementById("xNumberPointType").textContent = typeof xNumberPoint;
+        document.getElementById("xNumberNegativeValue").textContent = xNumberNegative;
+        document.getElementById("xNumberNegativeType").textContent = typeof xNumberNegative;
+        document.getElementById("xBooleanValue").textContent = xBoolean;
+        document.getElementById("xBooleanType").textContent = typeof xBoolean;
+        document.getElementById("xArrayValue").textContent = JSON.stringify(xArray);
+        document.getElementById("xArrayType").textContent = typeof xArray;
+        document.getElementById("xObjectValue").textContent = JSON.stringify(xObject);
+        document.getElementById("xObjectType").textContent = typeof xObject;
+        document.getElementById("xNullValue").textContent = xNull;
+        document.getElementById("xNullType").textContent = typeof xNull;
+        document.getElementById("xBlankValue").textContent = xBlank;
+        document.getElementById("xBlankType").textContent = typeof xBlank;
+
+        </script>
+    </body>
+</html>
