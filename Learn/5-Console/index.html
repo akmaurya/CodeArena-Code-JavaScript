@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+            Learn JavaScript
+        </title>
+        
+    </head>
+    <body>
+        <h1>
+            Console
+        </h1>
+        <script>
+            var x = 50;
+
+            console.log(x+20);
+
+
+            // Log a simple message
+            console.log("Hello, World!");
+
+            // Log a message with formatting
+            console.log("The %s is %d years old.", "cat", 3);
+
+            // Log an error message
+            console.error("This is an error message.");
+
+            // Log a warning message
+            console.warn("This is a warning message.");
+
+            // Log an informational message
+            console.info("This is an informational message.");
+
+            // Log an object
+            const myObject = { name: "John", age: 30, city: "New York" };
+            console.log("User:", myObject);
+
+            // Log a table
+            const myArray = [
+            { name: "Alice", age: 25, city: "London" },
+            { name: "Bob", age: 32, city: "Paris" },
+            { name: "Charlie", age: 28, city: "Berlin" }
+            ];
+            console.table(myArray);
+
+            // Grouping messages
+            console.group("Group 1");
+            console.log("Message 1");
+            console.log("Message 2");
+            console.groupEnd();
+
+            // Counting occurrences
+            console.count("Counter");
+            console.count("Counter");
+            console.count("Counter");
+
+            // Timing operations
+            console.time("Timer");
+            for (let i = 0; i < 1000000; i++) {
+            // Some time-consuming operation
+            }
+            console.timeEnd("Timer");
+
+            // Clear the console
+            console.clear();
+        </script>
+    </body>
+</html>
