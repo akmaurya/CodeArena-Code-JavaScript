@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../CommonCSS/listInStyle.css">
+    <link rel="stylesheet" type="text/css" href="../CommonCSS/h1Style.css">
+    
+</head>
+<body>
+    <h1 class="attractive-heading">Object</h1>
+  <ul class="colorful-list">
+    <ol>
+        <li>JavaScript Object</li>
+      </ol>
+  </ul>
+
+
+    <script>
+      var a = {
+        fName : 'Khushboo',
+        lName : 'Maurya',
+        age : 23,
+        email : 'khushboo@gmail.com',
+        favMovies : ['Dhoom', 'Sholay', 'Hum'],
+        living : {
+          'city' : 'Chandigarh',
+          'contry' : 'India'
+        },
+        salary : function(){
+          return 20000;
+        },
+        fullName : function(){
+          return this.fName + " " + this.lName; 
+        },
+
+      }
+      console.log(a);
+      document.write("First Name: "+a.fName);
+      document.write("<br>Favourate Movies: "+a.favMovies);
+      document.write("<br>One Movie at index 2: "+a.favMovies[2]);
+      document.write("<br>Salary from a Function: "+a.salary());
+      document.write("<br>Full Name from a Function: "+a.fullName());
+      document.write("<br>Living inner Property: "+a.living.contry);
+      
+      // for in loop
+      for(var key in a){
+        document.write("<br>"+key+" : "+a[key]);
+      }
+    </script>
+</body>
+</html>

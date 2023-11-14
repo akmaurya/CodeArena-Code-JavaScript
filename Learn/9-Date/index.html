@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../CommonCSS/listInStyle.css">
+    <link rel="stylesheet" type="text/css" href="../CommonCSS/h1Style.css">
+    
+</head>
+<body style="background-color: #93d1e2;">
+    <h1 class="attractive-heading">Date</h1>
+  <ul class="colorful-list">
+    <ol>
+        <li>JavaScript Date</li>
+      </ol>
+  </ul>
+
+
+    <script>
+      var currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth(); // Month is zero-indexed
+      const day = currentDate.getDate();
+      document.write("<br>Current Date : "+currentDate);
+      document.write("<br>Current Year : "+year);
+      document.write("<br>Current Month : "+month);
+      document.write("<br>Current Day : "+day);
+      document.write(`<br>Year: ${year}, Month: ${month + 1}, Day: ${day}`);
+
+      const hours = currentDate.getHours();
+      const minutes = currentDate.getMinutes();
+      const seconds = currentDate.getSeconds();
+      document.write("<br>Current Hours : "+hours);
+      document.write("<br>Current Minutes : "+minutes);
+      document.write("<br>Current Seconds : "+seconds);
+      document.write(`<br>Time: ${hours}:${minutes}:${seconds}`);
+
+      const formattedDate = currentDate.toDateString();
+      document.write(`<br>Formatted Date: ${formattedDate}`);  
+
+      // Setting a specific date
+      const futureDate = new Date();
+      futureDate.setFullYear(2024);
+      futureDate.setMonth(6); // Month is zero-indexed
+      futureDate.setDate(15);
+      document.write("<br>Future Date: "+futureDate);
+      document.write(`<br>Future Date: ${futureDate.toDateString()}`);
+
+
+      const differenceInMilliseconds = futureDate - currentDate;
+      const daysDifference = Math.floor(differenceInMilliseconds / (1000 * 60 * 60 * 24));
+      document.write("<br>Days until the future date: "+daysDifference);
+      document.write(`<br>Days until the future date: ${daysDifference}`);
+
+      const tenDaysLater = new Date();
+      tenDaysLater.setDate(currentDate.getDate() + 10);
+      document.write("<br>Date ten days later: "+tenDaysLater);
+      document.write(`<br>Date ten days later: ${tenDaysLater.toDateString()}`);
+
+      const dayOfWeek = currentDate.getDay(); // Returns 0 for Sunday, 1 for Monday, etc.
+      document.write("<br>Day of the week: "+dayOfWeek);
+      document.write(`<br>Day of the week: ${dayOfWeek}`);
+    </script>
+</body>
+</html>
